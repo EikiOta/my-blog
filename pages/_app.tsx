@@ -1,6 +1,17 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+// pages/_app.tsx
+import type { AppProps } from 'next/app';
+import Header from '../components/Header';
+import '../styles/globals.css'; // 追加
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <Header />
+      <main className="content"> {/* 追加 */}
+        <Component {...pageProps} />
+      </main> {/* 追加 */}
+    </>
+  );
 }
+
+export default MyApp;

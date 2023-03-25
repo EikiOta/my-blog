@@ -19,7 +19,7 @@ interface HomeProps {
 const Home: NextPage<HomeProps> = ({ allPostsData, page, hasNextPage }) => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>My Blog</h1>
+      <h1 className={styles.title}>SK99 Blog</h1>
       <div className={styles.main}>
         <div className={styles.grid}>
           {allPostsData.map(({ id, date, title, thumbnail }) => (

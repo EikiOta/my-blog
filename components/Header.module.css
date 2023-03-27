@@ -32,9 +32,6 @@
   .navUl a:hover {
     color: #ccc;
   }
-  /* Header.module.css */
-
-/* すでにあるスタイルの下に追加 */
 @media (max-width: 768px) {
     .navUl li {
       margin: 0 1rem; /* 横間隔を狭める */

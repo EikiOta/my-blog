@@ -1,15 +1,8 @@
-// pages/posts/[id].tsx
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getPostData, getSortedPostsData } from '../../lib/posts';
+import markdownStyles from '../../styles/markdown.module.css';
+import Head from 'next/head';
 
-
-
-export interface PostData {
-    id: string;
-    date: string;
-    title: string;
-    [key: string]: any;
-  }
 interface PostProps {
   postData: {
     title: string;
@@ -21,9 +14,14 @@ interface PostProps {
 const Post = ({ postData }: PostProps) => {
   return (
     <div>
+      <Head>
+        <title>{postData.title}</title>
+        <meta name="description" content={`Read the article: ${postData.title}`} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <h1>{postData.title}</h1>
       <div>{postData.date}</div>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} className={markdownStyles.markdown} />
     </div>
   );
 };
@@ -59,3 +57,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 
 export default Post;
+

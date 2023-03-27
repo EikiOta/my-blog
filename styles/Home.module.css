@@ -32,16 +32,19 @@
   border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
-  width: 80%; /* サイズ調整 */
-  height: 80%; /* サイズ調整 */
+  padding-bottom: 56.25%; /* アスペクト比 16:9 の場合 */
 }
-
 
 .post img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
+
 
 .post h2 {
   position: absolute;
@@ -100,17 +103,20 @@
   text-align: center;
   margin-top: 2rem;
 }
-/* Home.module.css */
 
-/* すでにあるスタイルの下に追加 */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* 画面サイズが小さい場合は2列に変更 */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 480px) {
   .grid {
-    grid-template-columns: 1fr; /* 画面サイズがさらに小さい場合は1列に変更 */
+    grid-template-columns: 1fr; 
+  }
+}
+@media (max-width: 1024px) {
+  .post {
+    width: 100%;
   }
 }

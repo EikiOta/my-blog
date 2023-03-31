@@ -7,6 +7,7 @@ interface PostProps {
   postData: {
     title: string;
     date: string;
+    category: string;
     contentHtml: string;
   };
 }
@@ -19,8 +20,10 @@ const Post = ({ postData }: PostProps) => {
         <meta name="description" content={`Read the article: ${postData.title}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>{postData.title}</h1>
-      <div>{postData.date}</div>
+      <h1 className={markdownStyles.articleTitle}>{postData.title}</h1>
+<div className={markdownStyles.articleDate}>{postData.date}</div>
+<div className={markdownStyles.articleCategory}>{postData.category}</div>
+
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} className={markdownStyles.markdown} />
     </div>
   );

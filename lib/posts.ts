@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import remarkImages from 'remark-images';
-import remarkBreaks from 'remark-breaks'; 
+ 
 import remarkGfm from 'remark-gfm'; 
 
 const postsDirectory = path.join(process.cwd(), 'content', 'posts');
@@ -65,22 +65,22 @@ export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-
   const matterResult = matter(fileContents);
 
-
+  // ここで remark-gfm を適用
   const processedContent = await remark()
+    .use(remarkGfm)
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
-
   return {
     id,
     contentHtml,
-    ...matterResult.data as { date: string; title: string; category: string }, 
+    ...matterResult.data as { date: string; title: string; category: string },
   };
 }
+
 
 
 

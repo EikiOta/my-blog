@@ -38,3 +38,19 @@
   .markdown del {
     text-decoration: line-through;
   }
+
+  .markdown s,
+  .markdown del,
+  .markdown ins,
+  .markdown strike {
+    text-decoration: line-through;
+  }
+
+  .markdown br {
+    content: "";
+    display: block;
+    margin-top: 1rem;
+  }
+  .markdown .spacer {
+    height: 1rem;
+  }

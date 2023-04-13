@@ -94,7 +94,10 @@ const Home: NextPage<HomeProps> = ({ allPostsData, page, hasNextPage }) => {
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const page = parseInt(query.page as string) || 1;
-  const allPostsData = await getSortedPostsData(); // getSortedPostsDataを使用
+  const allPostsData = (await getSortedPostsData()).map((post) => ({
+    ...post,
+    thumbnail: post.thumbnail || null,
+  })); //getSortedPostsData使用
 
   return {
     props: {

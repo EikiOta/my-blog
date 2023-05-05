@@ -14,10 +14,11 @@ export interface PostData {
   id: string;
   date: string;
   title: string;
-  thumbnailUrl?: string;
-  category?: string; 
+  thumbnail?: string;
+  category: string;
   [key: string]: any;
 }
+
 
 export function getPaginatedPostsData(page: number, limit: number): PostData[] {
   const allPostsData = getSortedPostsData();

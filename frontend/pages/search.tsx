@@ -20,8 +20,10 @@ const Search: NextPage = () => {
   
     // 環境変数を使ってバックエンドのURLを指定
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
-    const response = await fetch(`${backendUrl}/search?query=${searchTerm}`);
-  
+    const response = await fetch(`${backendUrl}/search?query=${searchTerm}`, {
+      credentials: 'include',
+    });
+    
     const data = await response.json();
     console.log(data);
     setSearchResults(data);

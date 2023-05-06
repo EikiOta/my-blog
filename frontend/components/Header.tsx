@@ -1,4 +1,3 @@
-// components/Header.tsx
 import Link from 'next/link';
 import styles from './Header.module.css';
 
@@ -18,6 +17,10 @@ const Header = () => {
           </li>
           <li>
             <Link href="/junkyard">Junkyard</Link>
+          </li>
+          {/* Search リンクを追加 */}
+          <li>
+            <Link href="/search">Search</Link>
           </li>
         </ul>
       </nav>

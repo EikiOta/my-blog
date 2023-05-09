@@ -8,7 +8,7 @@ const Contact = () => {
             <meta name="description" content="My profile page" />
             <link rel="icon" href="/favicon.ico" />
           </Head>
-            <p>ないです</p>
+            <p>工事中</p>
         </div>
       );
 };

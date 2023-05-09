@@ -4,9 +4,9 @@ date: '2023-03-25'
 category: '日常'
 ---
 
-![Example Image](/images/ike.png)
+![Example Image](/images/profile.png)
 
 ブログ始めました、よろしくです
 
-主にtech()関連と最近始めたベースの進捗でもあげていきます.（後は日常の話）
+主にweb技術関連と最近始めたベースの進捗でもあげていきます.（後は日常の話）
 

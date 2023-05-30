@@ -12,7 +12,7 @@ const Profile = () => {
 
       <main className={styles.main}>
         <div className={styles.profile}>
-          <img src="/images/profile.png" alt="Profile Picture" width="256" height="256" />
+          <img src="/images/ike.png" alt="Profile Picture" width="256" height="256" />
           <h1>SK99</h1>
           <p>
             ブログ初心者です、よろしくお願いします。

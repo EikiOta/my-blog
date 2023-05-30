@@ -4,7 +4,7 @@ date: '2023-03-25'
 category: '日常'
 ---
 
-![Example Image](/images/profile.png)
+![Example Image](/images/ike.png)
 
 ブログ始めました、よろしくです
 

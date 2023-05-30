@@ -8,9 +8,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
-      <main className="content"> {/* 追加 */}
+      <main className="content"> {}
         <Component {...pageProps} />
-      </main> {/* 追加 */}
+      </main> {}
     </>
   );
 }

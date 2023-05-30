@@ -1,4 +1,3 @@
-// my-blog-backend/backend/src/main.ts
 
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
@@ -13,7 +12,7 @@ const server = express();
 async function createApp() {
   const app = await NestFactory.create(AppModule, new ExpressAdapter(server));
 
-  // CORS設定の変更
+  //CORS設定の変更
   app.enableCors({
     origin: process.env.BACKEND_ALLOWED_ORIGIN || 'http://localhost:3000',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',

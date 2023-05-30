@@ -72,7 +72,7 @@ const Home: NextPage<HomeProps> = ({ allPostsData, page, hasNextPage }) => {
                     <span>{category}</span>
                     <span className={styles.postDate}>{date}</span>
                   </div>
-                  <p>{/*本文の抜粋表示 */}</p>
+                  <p>{/*ほんぶｎ*/ }</p>
                 </div>
               </div>
             </Link>

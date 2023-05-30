@@ -56,7 +56,6 @@ export class SearchService {
       return {
         id: document.id,
         title: document.title,
-        // date, thumbnail, category が documents に存在しないため、削除
         score: result.score,
       };
     });

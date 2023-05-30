@@ -68,7 +68,7 @@ export async function getPostData(id: string) {
 
   const matterResult = matter(fileContents);
 
-  // ここで remark-gfm を適用
+  //remark-gfmを適用
   const processedContent = await remark()
     .use(remarkGfm)
     .use(html)

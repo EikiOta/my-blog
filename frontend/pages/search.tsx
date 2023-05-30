@@ -18,7 +18,7 @@ const Search: NextPage = () => {
   const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   
-    // 環境変数を使ってバックエンドのURLを指定
+    //環境変数を使ってバックエンドのURLを指定
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
     const response = await fetch(`${backendUrl}/api/search?query=${searchTerm}`, {
       credentials: 'include',

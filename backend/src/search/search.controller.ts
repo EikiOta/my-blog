@@ -9,7 +9,7 @@ export class SearchController {
   async search(@Query('query') query: string) {
     console.log('Search query:', query);
     const results = await this.searchService.search(query);
-    console.log('Search results:', results); // 検索結果をログに出力
+    console.log('Search results:', results); //検索結果をログに出力
     return results;
   }
 }

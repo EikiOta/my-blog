@@ -14,7 +14,7 @@ export class SearchService {
   }
 
   private buildIndex() {
-    // マークダウンファイルのディレクトリを指定（フロントエンドのcontent/postsディレクトリを指定）
+    // mdのディレクトリを指定（フロントエンドのcontent/postsディレクトリを指定）
     const postsDirectory = path.join(process.cwd(), '../frontend/content/posts');
     const fileNames = fs.readdirSync(postsDirectory);
   
